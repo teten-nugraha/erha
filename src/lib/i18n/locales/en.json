@@ -1,0 +1,34 @@
+{
+    "responden": {
+        "page_title": "Respondents",
+        "button_start": "Start Survey",
+        "language" : "Language",
+        "form" : {
+            "name" : "Name",
+            "email" : "Email",
+            "phone" : "Phone",
+            "outlet" : "Outlet",
+            "doctor" : "Doctor",
+            "nurse" : "Nurse",
+            "therapist" : "Therapist",
+            "client_care" : "Client Care",
+            "survey" : "Survey"
+        }
+    },
+    "survey": {
+        "progress"    : "of",
+        "subtitle"    : "This field is necessary",
+        "low"         : "Very dissatisfied",
+        "high"        : "Very satisfied",
+        "low_br"      : "Very<br>dissatisfied",
+        "high_br"     : "Very<br>satisfied",
+        "low_nps"     : "Highly not recommended",
+        "high_nps"    : "Highly recommended",
+        "textarea_placholder" : "Please fill in your answer here",
+        "textarea_placholder_1" : "Describe the issues you are facing",
+        "button_next" : "Next",
+        "button_back" : "Back",
+        "button_save" : "Submit",
+        "times" : "minutes"
+    }
+}

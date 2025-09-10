@@ -1,0 +1,34 @@
+{
+    "responden": {
+        "page_title": "Responden",
+        "button_start": "Mulai Survei",
+        "language" : "Bahasa",
+        "form" : {
+            "name" : "Nama",
+            "email" : "Email",
+            "phone" : "Phone",
+            "outlet" : "Outlet",
+            "doctor" : "Dokter",
+            "nurse" : "Perawat",
+            "therapist" : "Therapist",
+            "client_care" : "Client Care",
+            "survey" : "Survey"
+        }
+    },
+    "survey": {
+        "progress"    : "dari",
+        "subtitle"    : "Bidang ini diperlukan",
+        "low"         : "Sangat tidak memuaskan",
+        "high"        : "Sangat memuaskan",
+        "low_br"      : "Sangat<br>tidak memuaskan",
+        "high_br"     : "Sangat<br>memuaskan",
+        "low_nps"     : "Sangat tidak merekomendasikan",
+        "high_nps"    : "Sangat ingin Merekomendasikan",
+        "textarea_placholder" : "Silahkan isi jawaban disini",
+        "textarea_placholder_1" : "Deskripsikan kendala yang Anda alami",
+        "button_next" : "Selanjutnya",
+        "button_back" : "Kembali",
+        "button_save" : "Submit",
+        "times" : "menit"
+    }
+}
