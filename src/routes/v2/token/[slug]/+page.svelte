@@ -31,6 +31,7 @@
         'nama' : '',
         'jenis' : '',
     }
+    let status:boolean = false
 
     let iti: intlTelInput.Plugin;
     let input: HTMLInputElement;
@@ -44,9 +45,14 @@
     onMount(async () => {
         promise = checkOutlet(data.kodeOutlet)
         const res = await promise
+        status = res.status
         outlet = res.data
         greeting = res.message
-        logo = outlet.jenis == 'ULTIMATE' ? logoUltimate : logoDermies;
+        if(!status){
+            logo = logoUltimate
+        }else {
+            logo = outlet.jenis == 'ULTIMATE' ? logoUltimate : logoDermies;
+        }
 
         // @ts-ignore
         await import("intl-tel-input/build/js/utils");
@@ -78,7 +84,7 @@
     const checkOutlet = async (kodeOutlet: any) => {
         const apiUrl = `${PUBLIC_API_URL}/api/v2/responden/check-outlet?kode=${kodeOutlet}`
         const res = await fetch(apiUrl)
-        if (!res.ok) throw new Error('Bad response')
+        //if (!res.ok) throw new Error('Bad response')
         const data = await res.json()
 
         return data
@@ -150,6 +156,25 @@
     <Loading />
 </div>
 {:then res}
+{#if !status}
+    <div class="page-orange" style="background-color: white;">
+    {#if outlet.id != ''}
+        <div class="flex justify-center items-center">
+            <div class="text-center mt-8">
+                <img alt="logo" src={logo} style="height: {outlet.jenis == 'ULTIMATE' ? '100px' : '70px'};" />
+            </div>
+        </div>
+        
+        <div class="card card-compact w-100 mt-3">
+            <div class="card-body">
+                <div class="text-center text-base-1 font-medium mb-4">
+                    <div>Survey di outlet ini belum tersedia</div>
+                </div>
+            </div>
+        </div>
+    {/if}
+</div>
+{:else}
 <div class="page-orange" style="background-color: white;">
     {#if outlet.id != ''}
         <div class="flex justify-center items-center">
@@ -221,4 +246,5 @@
         </div>
     {/if}
 </div>
+{/if}
 {/await}
