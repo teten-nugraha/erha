@@ -159,16 +159,18 @@
 {#if !status}
     <div class="page-orange" style="background-color: white;">
     {#if outlet.id != ''}
-        <div class="flex justify-center items-center">
+        <div id="header-logo" class="flex justify-center items-center">
             <div class="text-center mt-8">
-                <img alt="logo" src={logo} style="height: {outlet.jenis == 'ULTIMATE' ? '100px' : '70px'};" />
+                <img alt="logo" src={logo} style="height: {outlet.jenis == 'ULTIMATE' ? '100px' : '90px'};" />
             </div>
         </div>
         
-        <div class="card card-compact w-100 mt-3">
-            <div class="card-body">
-                <div class="text-center text-base-1 font-medium mb-4">
-                    <div>Survey di outlet ini belum tersedia</div>
+        <div class="flex flex-col justify-center items-center" style="height: 50vh;">
+            <div class="card card-compact w-100">
+                <div class="card-body flex justify-center items-center" style="height: 100%;">
+                    <div class="text-center text-2xl">
+                        <div>Survey saat ini belum tersedia</div>
+                    </div>
                 </div>
             </div>
         </div>
